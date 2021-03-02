@@ -1,0 +1,8 @@
+| Action      | Expected Results| Initial Results| Browsers Tested|Pass/Fail
+| ----------- | ----------------|----------------|----------------|----------------|
+| Displayment of Code     | Code Examples displayed correctly?          | Code examples are displayed correctly.        | Google Chrome/Microsoft Edge/Firefox        | Pass            |
+| Loading of Webpage   | Webpage renders in quickly?           | Webpage renders in quick and doesn't take much time.             |      Google Chrome/Microsoft Edge/Firefox         |        Pass        |
+|  Functionality of Navigation bar  | Do all of the navigations work correctly?           | Navigations work correctly and no issues occur once clicked.              |        Google Chrome/Microsoft Edge/Firefox       |       Pass         |
+| Button fuctionality  | Do buttons show the correct content once clicked?            | Buttons have no issues and display the correct content.              |       Google Chrome/Microsoft Edge/Firefox         |        Pass        |
+| Live Countdown (Timer)   | Does the countdown continue after webpage has been refreshed?           | Countdown continues after the page has been refreshed.             |         Google Chrome/Microsoft Edge/Firefox      |       Pass.         |
+| Button Functionality #2   | Does the text disappear and re-appear once the button is pressed?          | Text appears and dissappears once the button is clicked.              |         Google Chrome/Microsoft Edge/Firefox         |       Pass         |

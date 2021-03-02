@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+<title>L3U20A2</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="header">
+  <h1>Client Side Customisation of Web Pages</h1>
+  <p>Task 1</p>
+  <p>by Arijus Gestautas</p>
+</div>
+
+
+<ul>
+  <li><a class="active" href="index.html">Task 1</a></li>
+  <li><a href="task2.html">Task 2</a></li>
+  <li><a href="task3.html">Task 3</a></li>
+</ul>
+
+<div class="content">
+  <h3>What is JavaScript?</h3>
+<p>
+  It's a scripting language which enables you to create updating content,
+  it allows you to control multimedia features, animated features and a lot more which allows you to make something
+  look more advanced and unique.
+
+  Whenever something interactive appears on a webpage, for example a map which you can zoom into or
+  an image which can be rotated using the mouse, there's already a hint that JavaScript is being used.
+<h3>How to incorporate JavaScript into web pages:</h3>
+In a web page, most of the time if you're trying to implement JavaScript
+inside of it, you should usually use the <xmp><script></script></xmp> tags. This code line can go inside
+of a document header, it's mostly useful as it doesn't get in the way of the main content.
+<br>
+<br>
+<br>
+If at any moment you'd like the script to run at a specific stage when the page is rendered, it should most of the time be put at
+the correct stage of the document, most of the time inside of the document body. If the script size is small, then you should
+consider putting it all into one place and where it will be used as a whole. However, if the code is large, then you should consider putting
+it inside of the head function.
+<br>
+<br>
+If the script is used on more than one page, or if the size is ridiculous, then consider putting it inside of it's own file and load it in the document
+header. This will prevent clutter of the code and you will avoid any syntax problems.
+<h3>Main uses of Javascript:</h3>
+JavaScript adds more interaction to the web page, making it more user interactive for the user. There are many things which JavaScript can do, and below will only show a few examples of what it's capable of:
+<br>
+</p>
+
+<p>One of the few examples can be hiding text and revealing it again in a click of a button, so if the button is clicked below some text will dissapear and re-appear once it's clicked again.</p>
+
+<button onclick="myFunction()">Press Me!</button>
+
+<div id="buttondiv">
+Click the button again to hide this text!
+<br>
+<br>
+Duis finibus turpis nec magna convallis, sit amet blandit purus venenatis. Nulla sit amet risus in felis tincidunt sagittis. Duis egestas nunc eget mi faucibus, nec gravida nulla porta. Curabitur mi dui, pretium tristique nisl sed, vestibulum fringilla lacus. Proin pharetra mollis erat, quis lobortis metus maximus in. Duis varius hendrerit pellentesque. Suspendisse dignissim molestie justo eget malesuada. Sed bibendum magna odio, vitae tempor justo laoreet eget. Aenean et consequat dolor.
+</div>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("buttondiv")
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+<br>
+<br>
+This example will show the current time once the button has been clicked, click the button again to update the time!
+<p id="time">Click the button below to show the time,
+<br>
+Once the button has been clicked, both texts will dissapear!
+</p>
+<button onclick="showTime()">Show Time</button>
+<script type="text/javascript">
+    function showTime(){
+        var now=new Date();
+        var seconds = now.getSeconds();
+        var minutes = now.getMinutes();
+        var hour = now.getHours();
+        document.getElementById('time').innerHTML = hour + ":" + minutes + ":" + seconds;
+    }
+</script>
+<br>
+<br>
+<p style="color: rgb(207, 142, 45);">Below is a live countdown timer which shows how many days are left until 2022!</p>
+<p id="demo"></p>
+
+<script>
+var countDownDate = new Date("Jan 1, 2022 00:00:00").getTime();
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+<h3>Limitations of JavaScript:</h3>
+<p>As any other programming language, JavaScript can have a few major drawbacks that will prevent a user from using it.</p>
+<li>Client-Side JavaScript does not allow the reading or writing of files.</li>
+<br>
+<li>It does not have any multithreading or multiprocessor capabilities.</li>
+<br>
+<li>Browser support, server-side scripts always produces the same output, but different browsers sometimes can cause this to be an issue as they will struggle to understand the code. To prevent this, test your code on multiple browsers to prevent any mistakes.</li>
+<br>
+<li>Most of the code in JavaScript is usually executed on the client-side, bugs and any other issues can occur and therefore it can be exploited, because of this drawback people tend to disable JavaScript. </li>
+<br>
+<br>
+</div>
+
+</body>
+</html>
